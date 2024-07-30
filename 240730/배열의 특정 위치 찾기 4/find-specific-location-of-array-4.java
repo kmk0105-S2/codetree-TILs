@@ -15,6 +15,9 @@ public class Main {
                 count++;
                 sum += val[i];
             }
+            if(val[i] == 0){
+                break;
+            }
             
         }
 
