@@ -11,7 +11,7 @@ public class Main {
             val[i] = scanner.nextInt();
         }
 
-        for(int i = 0; i<cnt; i++){
+        for(int i = cnt-1; i>=0; i--){
             if(val[i]%2 == 0){
                 System.out.printf("%d ", val[i]);
             }
