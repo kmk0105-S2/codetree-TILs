@@ -6,11 +6,11 @@ public class Main {
         
         char [] ch = new char[10]; 
 
-        for(int i = 0; i<ch.length; i++){
+        for(int i = 0; i<10; i++){
             ch[i] = scanner.next().charAt(0);
         }
 
-        for(int i = ch.length; i>=0; i--){
+        for(int i = 9; i>=0; i--){
             System.out.print(ch[i]+" ");
         }
 
