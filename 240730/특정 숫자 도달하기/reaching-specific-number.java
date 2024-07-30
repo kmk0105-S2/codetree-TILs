@@ -2,26 +2,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner =new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int [] tntwk = new int[10];
+        
+        int[] arr = new int[10];
         int sum = 0;
-        int count = 0;
-        double avg = 0;
+        int cnt = 0;
+        
 
-        for(int i = 0; i<10; i++){
-            int var = scanner.nextInt();
-            if(var >=250){
-                break;
-            }
-            else{
-                sum += var;
-                count++;
-            }
+        for(int i = 0; i < 10; i++) {
+            arr[i] = sc.nextInt();
         }
 
-        avg = (double)sum / count;
+        
+        for(int i = 0; i < 10; i++) {
+            if(arr[i] >= 250) 
+                break;
+            sum += arr[i];
+            cnt++;
+        }
+        
+        
+        double avg = (double)sum / cnt;
 
-        System.out.print("%d %.1f", sum, avg);
+        
+        System.out.printf("%d %.1f", sum, avg);
     }
 }
