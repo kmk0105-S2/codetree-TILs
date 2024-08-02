@@ -30,6 +30,10 @@ public class Main {
                     }
                 }
             }
+            if(B[0] != A[k]){
+                System.out.print("No");
+                break;
+            }
         }
 
     }
