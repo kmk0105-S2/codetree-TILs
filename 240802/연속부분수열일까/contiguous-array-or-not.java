@@ -17,23 +17,28 @@ public class Main {
             B[j] = scanner.nextInt();
         }
 
-        for(int k = 0; k < n1; k++){
-            if(B[0] == A[k]){
-                for(int i = 1; i<n2; i++){
-                    if(B[i] != A[k+i]){
-                        System.out.print("No");
-                        break;
-                    }
-                    else{
-                        System.out.print("Yes");
-                        break;
-                    }
+        boolean match = false;
+
+        for (int k = 0; k <= n1 - n2; k++) {
+            boolean match = true;
+
+            for (int i = 0; i < n2; i++) {
+                if (A[k + i] != B[i]) {
+                    match = false;
+                    break;
                 }
             }
-            if(B[0] != A[k]){
-                System.out.print("No");
+
+            if (match) {
+                found = true;
                 break;
             }
+        }
+
+        if (found) {
+            System.out.print("Yes");
+        } else {
+            System.out.print("No");
         }
 
     }
