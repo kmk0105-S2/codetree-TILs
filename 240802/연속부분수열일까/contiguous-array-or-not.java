@@ -17,7 +17,7 @@ public class Main {
             B[j] = scanner.nextInt();
         }
 
-        boolean match = false;
+        boolean found = false;
 
         for (int k = 0; k <= n1 - n2; k++) {
             boolean match = true;
