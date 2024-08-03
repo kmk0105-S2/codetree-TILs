@@ -12,11 +12,11 @@ public class Main {
             val[i] = scanner.nextInt();
         }
 
-        for(int j = 0; j < n - 1; j++){
-            for(int k = 1; k < n - j; k++){
-                if(val[j] == val[j+k]){
+        for(int j = 0; j < n; j++){
+            for(int k = j + 1; k < n; k++){
+                if(val[j] == val[k]){
                     val[j] = 0;
-                    val[j+k] = 0;
+                    val[k] = 0;
                 }
             }
         }
