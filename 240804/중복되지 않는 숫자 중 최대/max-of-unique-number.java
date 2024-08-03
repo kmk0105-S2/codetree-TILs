@@ -16,6 +16,7 @@ public class Main {
             for(int k = 1; k < n - j; k++){
                 if(val[j] == val[j+k]){
                     val[j] = 0;
+                    val[j+k] = 0;
                 }
             }
         }
