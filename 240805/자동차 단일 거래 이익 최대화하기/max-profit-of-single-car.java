@@ -23,7 +23,7 @@ public class Main {
         }
 
         if (index != -1) {
-            for (int j = index; j < n; j++) {
+            for (int j = index+1; j < n; j++) {
                 if (car[j] > max) {
                     max = car[j];
                 }
@@ -34,7 +34,8 @@ public class Main {
             } else {
                 System.out.printf("0");
             }
-        } else {
+        }
+        else {
             System.out.printf("0");
         }
 
