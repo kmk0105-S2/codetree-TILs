@@ -14,6 +14,7 @@ public class Main {
         }
 
         int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
         int index = -1;
 
         for(int i = 0; i < car.size(); i++){
@@ -23,23 +24,16 @@ public class Main {
             }
         }
 
-        int max = Integer.MIN_VALUE;
-
         if(index != n){
             for(int j = index; j <car.size(); j++){
                 if(car.get(j) > max){
                     max = car.get(j);
                 }
             }
+            System.out.printf("%d", max-min);
         }
         else {
             max = min;
-        }
-
-        if(max - min > 0){
-            System.out.printf("%d", max-min);
-        }
-        else{
             System.out.printf("0");
         }
 
