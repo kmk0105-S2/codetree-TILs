@@ -22,19 +22,21 @@ public class Main {
             }
         }
 
-        if(index != n){
-            for(int j = index; j <n; j++){
-                if(car[j] > max){
+        if (index != -1) {
+            for (int j = index; j < n; j++) {
+                if (car[j] > max) {
                     max = car[j];
                 }
             }
-            System.out.printf("%d", max-min);
-        }
-        else {
+            
+            if (max != Integer.MIN_VALUE) {
+                System.out.printf("%d", max - min);
+            } else {
+                System.out.printf("0");
+            }
+        } else {
             System.out.printf("0");
         }
-
-
 
     }
 }
