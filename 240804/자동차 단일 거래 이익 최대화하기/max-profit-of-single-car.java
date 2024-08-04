@@ -25,10 +25,15 @@ public class Main {
 
         int max = Integer.MIN_VALUE;
 
-        for(int j = index + 1; j <car.size(); j++){
-            if(car.get(j) > max){
-                max = car.get(j);
+        if(index != n){
+            for(int j = index; j <car.size(); j++){
+                if(car.get(j) > max){
+                    max = car.get(j);
+                }
             }
+        }
+        else {
+            max = min;
         }
 
         if(max - min > 0){
