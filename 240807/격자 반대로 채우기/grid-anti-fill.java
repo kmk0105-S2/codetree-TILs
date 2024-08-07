@@ -7,29 +7,38 @@ public class Main {
         int n = scanner.nextInt();
         int [][] arr = new int [n][n];
         int cnt = 1;
+        int cnt2 = 6;
 
-        for(int col = n-1; col >=0; col--){
-            
-            if(col % 2 == 1){
-                int row = n-1;
+        for(int col = n-1; col >=0; col-=2){
+            int row = n-1;
 
-                while(row >= 0){
-                    arr[row][col] = cnt;
-                    cnt++;
-                    row--;
+            while(true){
+                arr[row][col] = cnt;
+                row--;
+                cnt++;
+
+                if(row<0){
+                    cnt += n;
+                    break;
                 }
             }
-            if(col%2 == 0){
-                int row = 0;
-
-                while(row <= n-1){
-                    arr[row][col] = cnt;
-                    cnt++;
-                    row++;
-                }
-            }
-
         }
+
+        for(int col = n-2; col >=0; col-=2){
+            int row = 0;
+            
+            while(true){
+                arr[row][col] = cnt2;
+                row++;
+                cnt2++;
+
+                if(row==n){
+                    cnt2 += n;
+                    break;
+                }
+            }
+        }
+        
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
