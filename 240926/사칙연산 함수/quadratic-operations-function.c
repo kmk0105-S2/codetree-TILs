@@ -9,7 +9,7 @@ int minus(int a, int c){
         return a-c;
     }
     else{
-        return c-a;
+        return -(a-c);
     }
 }
 
